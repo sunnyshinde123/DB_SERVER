@@ -8,9 +8,9 @@
 <body>
     <h1>The Total Number of users are : <%=count%></h1> 
     <a href="http://localhost:5000/user">See all users here...</a>
-    <br><br>
-    <h3>Search Spefic User with their username :-</h3>
-    <br><br>
-    <button>Join us!</button>
+    <h3>Search Spefic User with their username :- <a href="http://localhost:5000/user/search">Click here!</a></h3>
+    <form action="/user/new" method="get">
+        <button>Join us!</button>
+    </form>
 </body>
 </html>

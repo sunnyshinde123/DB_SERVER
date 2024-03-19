@@ -11,7 +11,7 @@
         table{
             margin: auto;
         }
-        table, th, tr {
+        table, th, tr,td{
             border: 2px solid black;
         }
     </style>
@@ -23,12 +23,24 @@
             <th>id</th>
             <th>username</th>
             <th>Email</th>
+            <th>Edit Username</th>
+            <th>Delete Username</th>
         </tr>
         <%for(user of result){%>
             <tr>
-                <th><%=user.id%></th>
-                <th><%=user.username%></th>
-                <th><%=user.email%></th>
+                <td><%=user.id%></td>
+                <td><%=user.username%></td>
+                <td><%=user.email%></td>
+                <td>
+                    <form action="/user/<%=user.id%>/edit" method="get">
+                        <button>Edit Username</button>
+                    </form>
+                </td>
+                <td>
+                    <form action="/user/<%=user.id%>/delete" method="get">
+                        <button>Delete User</button>
+                    </form>
+                </td>
             </tr>
         <%}%>
     </table>

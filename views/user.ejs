@@ -6,11 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Serch Specific User from table :-</h1>
+    <!-- <h1>Serch Specific User from table :-</h1>
     <form action="/user" method="get">
         <label for="username">Provide Username :-
             <input type="text" placeholder="username" name="username" id="username">
         </label>
+        <br><br>
+        <button>Search</button>
+    </form> -->
+
+    <h1>Serch Specific User from table :-</h1>
+    <form action="/user/search" method="POST">
+        <label for="username">Provide Username :-  </label>
+            <input type="text" placeholder="username" name="username" id="username">
         <br><br>
         <button>Search</button>
     </form>
